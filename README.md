@@ -2,7 +2,7 @@
 ![CSS](https://img.shields.io/badge/code-CSS-green)
 ![JS](https://img.shields.io/badge/code-JS-orange)
 
-# Sign in
+# Basic form validation
 _My form validation practice_
 
 This project is for frontend web development learning and practicing only. 

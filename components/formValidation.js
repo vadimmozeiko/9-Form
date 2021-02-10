@@ -1,6 +1,18 @@
 function formValidation (selector) {
+
+    if (typeof selector !== 'string' ||            
+        selector === '') {                          
+        console.error('ERROR: Invalid selector format');
+        return false;
+    }
+
     // find all given selectors (form)
     const form = document.querySelectorAll(selector)
+    if(!form) {
+        console.error ('ERROR: Cannot find given selector')
+        return false
+    }
+
     //save forms into array for iteration
     const forms = [...form];
     
@@ -18,6 +30,7 @@ function formValidation (selector) {
         // set event listener to prevent button default action
         button.addEventListener('click', event => {
             event.preventDefault()
+            // go through all inputs and textareas to find data- rules
             for (const input of allInputs) {
                 // save data rules into variable
                 const rule = input.dataset.validation;
@@ -26,7 +39,6 @@ function formValidation (selector) {
                 
                 if (rule === 'name') {
                     console.log(isValidName(text))
-                    return true
                 }
                 if (rule === 'email'){
                     console.log(isValidEmail(text))
@@ -37,14 +49,12 @@ function formValidation (selector) {
                 if (rule === 'text'){
                     console.log(isValidText(text))
                 }
-
             }
         });
-        // go through all inputs and textareas to find data- rules
     };
 };
 
-/* Main data validation functions */
+/*****************  Main data validation functions *****************/
 
 function isValidName(name) {
     // check for empty text
@@ -137,7 +147,7 @@ function isValidText(text){
 
 
 
-/* functions helpers */
+/***************** Functions helpers *****************/
 
 
 function isNonEmptyText(text) {

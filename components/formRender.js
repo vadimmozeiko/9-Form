@@ -1,6 +1,5 @@
 function formRender(selector) {
         // input validation 
-        selector = selector.trim()
 
     if (typeof selector !== 'string' ||            
         selector === '') {                          

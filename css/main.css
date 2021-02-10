@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -17,20 +18,71 @@ body {
     transform: translate(-50%, -50%);
     background-color: #cfcbcb;
     border-radius: 5%;
+    padding: 60px;
     
 }
 
-.left {
+.form-area {
     display: inline-block;
-    width: 50%;
-    float: left;
+    width: 100%;
     text-align: center;
 }
 
+
+.form-area > h1 {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.form-area > p {
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 30px;
+
+}
 
 .form {
     display: inline-block;
-    width: 50%;
-    float: right;
+    width: 100%;
     text-align: center;
+    padding: 30px;
 }
+
+.form > input,
+.form > textarea {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.form > input {
+
+}
+
+.form > textarea {
+    min-height: 200px;
+    max-height: 300px;
+    resize: vertical;
+}
+
+
+.form > input::placeholder{
+    padding: 10px 0;
+}
+
+.form > textarea::placeholder {
+    font-family: inherit;
+}
+
+.form > .button {
+    padding: 7px 25px;
+    font-size: 15px;
+}
+

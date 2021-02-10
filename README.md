@@ -15,7 +15,7 @@ Site published at https://vadimmozeiko.github.io/9-Form/
 
 -   Basic form
 -   Use JavaScript to generate HTML
--   
+-   Form fields input validation
 
 ## Authors
 

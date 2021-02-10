@@ -1,16 +1,20 @@
 function formRender(selector) {
-        // input validation
-
+        // input validation 
+        
 
 
 
         //logic
 
-    const DOM = document.querySelector(selector)
+    const DOM = document.querySelector(selector);
 
-    let HTML  = ''
+    let HTML  = `<input data-validation="name" type="text" placeholder="Name" required>
+    <input data-validation="email" type="text" placeholder="Email" required>
+    <input data-validation="number" type="text" placeholder="Number" required>
+    <textarea data-validation="text" placeholder="Message" required></textarea>
+    <button class="button" type="submit">Submit now</button>`;
 
-    for (let i = 0; i < 4; i++){
-        HTML += ``
-    }
+    DOM.innerHTML = HTML;
 }
+
+export {formRender}
